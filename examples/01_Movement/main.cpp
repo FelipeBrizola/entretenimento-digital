@@ -1,35 +1,24 @@
-/*
- * Exemplo de uso do framework de jogo
- *
- * Cria um jogo com 3 estados: "menu", "play" e "pause"
- *
- */
+#include <SFML/Graphics.hpp>
 
-#include <iostream>
-#include <cstdlib>
-#include <string>
-#include <cmath>
-
-#include "Game.h"
-#include "MenuState.h"
-
-int main(int argc, char **argv)
+int main()
 {
-    cgf::Game game(5,30);
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
 
-	game.init("Framework com estados, sprites e tiling",800,600,false);
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
 
-    game.changeState(MenuState::instance());
-
-	while(game.isRunning())
-	{
-		game.handleEvents();
-		game.update();
-		game.draw();
-	}
-
-	// cleanup the engine
-	game.clean();
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
 
     return 0;
 }
