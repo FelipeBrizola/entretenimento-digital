@@ -1,0 +1,317 @@
+# depslib dependency file v1.0
+1539813830 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<cmath>
+	"Game.h"
+	"MenuState.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/Game.h
+	<SFML/Audio.hpp>
+	<SFML/Graphics.hpp>
+	<stack>
+	<memory>
+	"ClockHUD.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/ClockHUD.h
+	<vector>
+	<string>
+	<sstream>
+	<iomanip>
+	<SFML/Graphics.hpp>
+	"FrameClock.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/FrameClock.h
+	<limits>
+	<cassert>
+	<algorithm>
+	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
+
+1449515351 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/GameState.h
+	"Game.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/Sprite.h
+	<vector>
+	<map>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/System/Vector2.hpp>
+	"TextureManager.h"
+	"Anim.h"
+	"pugixml/pugixml.hpp"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/TextureManager.h
+	<map>
+	<string>
+	<SFML/Graphics.hpp>
+	<memory>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/Anim.h
+	<string>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
+	"pugiconfig.hpp"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/InputManager.h
+	<map>
+	<SFML/Graphics.hpp>
+
+1449515351 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.cpp
+	<iostream>
+	"Game.h"
+	"InputManager.h"
+	"MenuState.h"
+	"PlayState.h"
+
+1539813712 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/tmx/MapLoader.h
+	<tmx/QuadTreeNode.h>
+	<iostream>
+	<pugixml/pugixml.hpp>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/tmx/QuadTreeNode.h
+	<tmx/MapObject.h>
+	<memory>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/tmx/MapObject.h
+	<string>
+	<vector>
+	<map>
+	<SFML/System.hpp>
+	<SFML/Graphics.hpp>
+	<tmx/Helpers.h>
+	"Debug.h"
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/tmx/Helpers.h
+	<math.h>
+	<SFML/Graphics/Rect.hpp>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/Debug.h
+	<iostream>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/Physics.h
+	<Box2D/Box2D.h>
+	<memory>
+	<vector>
+	"Sprite.h"
+	"EEDebugDraw3.h"
+	<cmath>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Box2D.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Common/b2Draw.h>
+	<Box2D/Common/b2Timer.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2MotorJoint.h>
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2Settings.h
+	<stddef.h>
+	<assert.h>
+	<float.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2Draw.h
+	<Box2D/Common/b2Math.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2Math.h
+	<Box2D/Common/b2Settings.h>
+	<math.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2Timer.h
+	<Box2D/Common/b2Settings.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/Shapes/b2CircleShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/Shapes/b2Shape.h
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2BlockAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/b2Collision.h
+	<Box2D/Common/b2Math.h>
+	<limits.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/Shapes/b2EdgeShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/Shapes/b2ChainShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/Shapes/b2PolygonShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/b2BroadPhase.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<algorithm>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/b2DynamicTree.h
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Common/b2GrowableStack.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2GrowableStack.h
+	<Box2D/Common/b2Settings.h>
+	<memory.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/b2Distance.h
+	<Box2D/Common/b2Math.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Collision/b2TimeOfImpact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Distance.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2Body.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<memory>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2Fixture.h
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2WorldCallbacks.h
+	<Box2D/Common/b2Settings.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2TimeStep.h
+	<Box2D/Common/b2Math.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2World.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Dynamics/b2ContactManager.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Common/b2StackAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/b2ContactManager.h
+	<Box2D/Collision/b2BroadPhase.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Contacts/b2Contact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<Box2D/Dynamics/b2Fixture.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2DistanceJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2Joint.h
+	<Box2D/Common/b2Math.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2FrictionJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2GearJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2MotorJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2MouseJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2PulleyJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2RopeJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2WeldJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/Box2D-2.3.0/include/Box2D/Dynamics/Joints/b2WheelJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/EEDebugDraw3.h
+	<Box2D/Box2D.h>
+	<SFML/Graphics.hpp>
+
+1449515351 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
+	<iostream>
+	"Game.h"
+	"InputManager.h"
+	"PauseState.h"
+
+1449515351 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1449515351 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.cpp
+	<iostream>
+	"Player.h"
+
+1449515351 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.h
+	<iostream>
+
+1539813701 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp
+	<iostream>
+	<cmath>
+	"Game.h"
+	"PlayState.h"
+	"InputManager.h"
+
+1449515351 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/GameOverState.h
+	"string"
+	"GameState.h"
+	"Sprite.h"
+	"Game.h"
+	"InputManager.h"
+

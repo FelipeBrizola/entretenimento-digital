@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:87d1e757a1a50e42ca05858f726bd148:4bf99dbb897d0c75bd614c02f3218185:2b3c1cc1eee38c954952b53bd3d88199$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="dk.png" width="588" height="588">
+    <sprite n="dk1.png" x="2" y="2" w="111" h="105" pX="0.5" pY="0.5"/>
+    <sprite n="dk2.png" x="115" y="2" w="111" h="105" pX="0.5" pY="0.5"/>
+    <sprite n="dk3.png" x="228" y="2" w="111" h="108" pX="0.5" pY="0.5"/>
+    <sprite n="dk4.png" x="341" y="2" w="111" h="114" pX="0.5" pY="0.5"/>
+    <sprite n="dk19.png" x="454" y="2" w="102" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk6.png" x="2" y="130" w="117" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk5.png" x="121" y="130" w="117" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk17.png" x="240" y="130" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk18.png" x="356" y="130" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk13.png" x="472" y="130" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk12.png" x="2" y="258" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk14.png" x="118" y="258" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk16.png" x="234" y="258" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk15.png" x="350" y="258" w="114" h="126" pX="0.5" pY="0.5"/>
+    <sprite n="dk11.png" x="466" y="258" w="120" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk7.png" x="2" y="386" w="128" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk9.png" x="132" y="386" w="130" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk8.png" x="264" y="386" w="130" h="122" pX="0.5" pY="0.5"/>
+    <sprite n="dk10.png" x="396" y="386" w="130" h="122" pX="0.5" pY="0.5"/>
+</TextureAtlas>
