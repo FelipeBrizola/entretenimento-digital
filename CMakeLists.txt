@@ -145,8 +145,8 @@ set(CGF_SOURCES
 
 
 #=====================SFML=====================
-set(SFML_ROOT lib/SFML-2.4.0)
-add_subdirectory(lib/SFML-2.4.0)
+set(SFML_ROOT lib/SFML-2.4.2)
+add_subdirectory(lib/SFML-2.4.2)
 #=====================SFML=====================
 
 

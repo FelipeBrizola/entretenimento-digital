@@ -20,11 +20,9 @@
 					<Add library="sfml-window" />
 					<Add library="sfml-system" />
 					<Add library="sfml-audio" />
-					<Add library="Box2D" />
 					<Add library="CGF-Linux" />
-					<Add library="libz" />
 					<Add directory="../../lib/Box2D-2.3.0/lib-Linux64" />
-					<Add directory="../../lib/SFML-2.4.2/lib-Linux64" />
+					<Add directory="../../lib/SFML-2.4.2/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release-Linux">
@@ -108,6 +106,11 @@
 			<Add directory="../../lib/CGF/include/tmx" />
 		</Compiler>
 		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add library="sfml-audio" />
+			<Add library="CGF-Linux" />
 			<Add directory="../../lib" />
 		</Linker>
 		<Unit filename="MenuState.cpp" />

@@ -184,7 +184,8 @@ b2Body* Physics::newCircle(int id, float x, float y, float radius, float density
 
 void Physics::setImage(b2Body* body, Sprite* Image)
 {
-    body->SetUserData(Image);
+    BodyData* bd = static_cast<BodyData*>(body->GetUserData());
+    bd->image = Image;
 }
 
 Sprite* Physics::getImage(b2Body* body)
