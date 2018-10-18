@@ -19,7 +19,7 @@ using namespace std;
 
 void PlayState::init()
 {
-    player.load("data/img/Char14.png");
+    player.load("data/img/Char19s.png");
 	player.setPosition(10,100);
 
     playSprite2.load("data/img/Char01.png");

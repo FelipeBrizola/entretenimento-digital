@@ -10,7 +10,7 @@ using namespace std;
 
 void MenuState::init()
 {
-    menuSprite.load("data/img/dk_logo.png"); // load donkey kong logo
+    menuSprite.load("data/img/dk_logo.png");
 
     im = cgf::InputManager::instance();
 
