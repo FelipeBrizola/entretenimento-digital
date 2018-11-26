@@ -19,6 +19,11 @@ using namespace std;
 
 void PlayState::init()
 {
+    map = new tmx::MapLoader("data/maps");       // todos os mapas/tilesets serão lidos de data/maps
+    map->Load("dungeon-tilesets2.tmx");
+
+    cout << "PlayState Init Successful" << endl;
+
     player.load("data/img/Char19s.png");
 	player.setPosition(10,100);
 
@@ -46,6 +51,8 @@ void PlayState::init()
 
 void PlayState::cleanup()
 {
+    delete map;
+    cout << "PlayState: Clean" << endl;
 	cout << "PlayState: Clean" << endl;
 }
 
@@ -102,7 +109,9 @@ void PlayState::update(cgf::Game* game)
 
 void PlayState::draw(cgf::Game* game)
 {
+
     screen = game->getScreen();
+    map->Draw(*screen);         // mapa é fundo, precisa desenhar primeiro
     screen->draw(player);
     screen->draw(playSprite2);
     screen->draw(playSprite3);
