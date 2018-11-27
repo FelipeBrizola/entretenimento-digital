@@ -13,15 +13,11 @@
 #include "GameState.h"
 #include "Sprite.h"
 #include "InputManager.h"
-#include <string>
-#include <tmx/MapLoader.h>
-
-using namespace std;
 
 class PlayState : public cgf::GameState
 {
-
     public:
+
     void init();
     void cleanup();
 
@@ -44,14 +40,7 @@ class PlayState : public cgf::GameState
 
     private:
 
-    enum { RIGHT = 0, LEFT, UP, DOWN, JUMP };
-
     static PlayState m_PlayState;
-
-    string playerStates[5];
-    int currentState;
-
-    tmx::MapLoader* map;
 
     int dirx, diry;
     cgf::Sprite player;

@@ -1,9 +1,5 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
 1543277578 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
-=======
-1543008234 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<iostream>
 	<cstdlib>
 	<string>
@@ -33,11 +29,7 @@
 	<SFML/System/Time.hpp>
 	<SFML/System/Clock.hpp>
 
-<<<<<<< HEAD
 1543278086 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
-=======
-1543008234 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
@@ -80,26 +72,17 @@
 	<map>
 	<SFML/Graphics.hpp>
 
-<<<<<<< HEAD
 1543279056 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.cpp
-=======
-1543008234 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/MenuState.cpp
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<iostream>
 	"Game.h"
 	"InputManager.h"
 	"MenuState.h"
 	"PlayState.h"
 
-<<<<<<< HEAD
 1543008234 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
-=======
-1543279449 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
-	<string>
 
 1539738803 /home/felipe/entretenimento-digital/lib/CGF/include/tmx/MapLoader.h
 	<tmx/QuadTreeNode.h>
@@ -332,15 +315,7 @@
 	"Game.h"
 	"InputManager.h"
 
-<<<<<<< HEAD
 1543008234 source:/home/felipe/projects/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
-=======
-<<<<<<< HEAD
-1543008234 source:/home/felipe/projects/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
-=======
-1543245283 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<iostream>
 	<cstdlib>
 	<string>
@@ -348,30 +323,14 @@
 	"Game.h"
 	"MenuState.h"
 
-<<<<<<< HEAD
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/Game.h
-=======
-<<<<<<< HEAD
-1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/Game.h
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/Game.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
 	<stack>
 	<memory>
 	"ClockHUD.h"
 
-<<<<<<< HEAD
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/ClockHUD.h
-=======
-<<<<<<< HEAD
-1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/ClockHUD.h
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/ClockHUD.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<vector>
 	<string>
 	<sstream>
@@ -379,51 +338,22 @@
 	<SFML/Graphics.hpp>
 	"FrameClock.h"
 
-<<<<<<< HEAD
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/FrameClock.h
-=======
-<<<<<<< HEAD
-1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/FrameClock.h
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/FrameClock.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<limits>
 	<cassert>
 	<algorithm>
 	<SFML/System/Time.hpp>
 	<SFML/System/Clock.hpp>
 
-<<<<<<< HEAD
 1543008234 /home/felipe/projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
-=======
-<<<<<<< HEAD
-1543008234 /home/felipe/projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
-=======
-1543245283 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/GameState.h
 	"Game.h"
 
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/Sprite.h
-<<<<<<< HEAD
-=======
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/GameState.h
-	"Game.h"
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/Sprite.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<vector>
 	<map>
 	<SFML/Graphics/RenderTarget.hpp>
@@ -435,37 +365,16 @@
 	"Anim.h"
 	"pugixml/pugixml.hpp"
 
-<<<<<<< HEAD
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/TextureManager.h
-=======
-<<<<<<< HEAD
-1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/TextureManager.h
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/TextureManager.h
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	<map>
 	<string>
 	<SFML/Graphics.hpp>
 	<memory>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/Anim.h
 	<string>
 
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
-<<<<<<< HEAD
-=======
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/Anim.h
-	<string>
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 	"pugiconfig.hpp"
 	<stddef.h>
 	<exception>
@@ -473,87 +382,9 @@
 	<iosfwd>
 	<string>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
 
 1543008234 /home/felipe/projects/entretenimento-digital/lib/CGF/include/InputManager.h
 	<map>
 	<SFML/Graphics.hpp>
 
-<<<<<<< HEAD
-=======
-=======
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/InputManager.h
-	<map>
-	<SFML/Graphics.hpp>
-
-1543245283 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.cpp
-	<iostream>
-	"Game.h"
-	"InputManager.h"
-	"MenuState.h"
-	"PlayState.h"
-
-1543246151 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
-	"GameState.h"
-	"Sprite.h"
-	"InputManager.h"
-	<tmx/MapLoader.h>
-
-1543245283 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
-	<iostream>
-	"Game.h"
-	"InputManager.h"
-	"PauseState.h"
-
-1543245283 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PauseState.h
-	"GameState.h"
-	"Sprite.h"
-	"InputManager.h"
-
-1543245283 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/Player.cpp
-	<iostream>
-	"Player.h"
-
-1543245283 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/Player.h
-	<iostream>
-
-1543246243 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp
-	<iostream>
-	<cmath>
-	"Game.h"
-	"PlayState.h"
-	"InputManager.h"
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/tmx/MapLoader.h
-	<tmx/QuadTreeNode.h>
-	<iostream>
-	<pugixml/pugixml.hpp>
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/tmx/QuadTreeNode.h
-	<tmx/MapObject.h>
-	<memory>
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/tmx/MapObject.h
-	<string>
-	<vector>
-	<map>
-	<SFML/System.hpp>
-	<SFML/Graphics.hpp>
-	<tmx/Helpers.h>
-	"Debug.h"
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/tmx/Helpers.h
-	<math.h>
-	<SFML/Graphics/Rect.hpp>
-
-1543245284 /home/kbase/Projects/entretenimento-digital/lib/CGF/include/Debug.h
-	<iostream>
-
->>>>>>> ecf8e3a24e0ce3f032f6c692f054db48886e892b
->>>>>>> cadf9a35d9823b0eafdaf40d351caab9b78235d9
