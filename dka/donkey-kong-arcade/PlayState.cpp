@@ -12,6 +12,7 @@
 #include "Game.h"
 #include "PlayState.h"
 #include "InputManager.h"
+#include <string>
 
 PlayState PlayState::m_PlayState;
 
@@ -40,6 +41,23 @@ void PlayState::init()
     im->addKeyInput("quit", sf::Keyboard::Escape);
     im->addKeyInput("stats", sf::Keyboard::S);
     im->addMouseInput("rightclick", sf::Mouse::Right);
+
+
+    playerStates[0] = "walk-right";
+    playerStates[1] = "walk-left";
+    playerStates[2] = "walk-up";
+    playerStates[3] = "walk-down";
+    playerStates[4] = "jump";
+    currentState = LEFT;
+
+
+    player.load("data/img/warrior.png",64,64,0,0,0,0,13,21,273);
+	player.setPosition(712,480);
+    player.loadAnimation("data/img/warrioranim.xml");
+    player.setAnimation(playerStates[currentState]);
+    player.setAnimRate(15);
+    player.play();
+
 
 	cout << "PlayState: Init" << endl;
 }

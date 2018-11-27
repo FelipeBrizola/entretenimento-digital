@@ -13,6 +13,10 @@
 #include "GameState.h"
 #include "Sprite.h"
 #include "InputManager.h"
+#include <string>
+
+using namespace std;
+
 
 class PlayState : public cgf::GameState
 {
@@ -40,7 +44,12 @@ class PlayState : public cgf::GameState
 
     private:
 
+    enum { RIGHT = 0, LEFT, UP, DOWN, JUMP };
+
     static PlayState m_PlayState;
+
+    string playerStates[5];
+    int currentState;
 
     int dirx, diry;
     cgf::Sprite player;
