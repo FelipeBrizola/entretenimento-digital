@@ -35,6 +35,9 @@ class MenuState : public cgf::GameState
 
     cgf::Sprite menuSprite;
     cgf::InputManager* im;
+
+    sf::SoundBuffer menuSoundBuffer;
+    sf::Sound menuSound;
 };
 
 #endif
