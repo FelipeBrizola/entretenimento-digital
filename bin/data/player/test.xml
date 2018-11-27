@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Format:
+name   => name of the animation sequence
+start  => starting frame
+end    => ending frame
+loop   => looping animation (default)
+-->
+<animation name="player">
+    <sequence name="down" start="11" end="12" loop="true" />
+    <sequence name="left" start="1" end="3" loop="true" />
+    <sequence name="up"  start="11" end="12" loop="true" />
+    <sequence name="right" start="4" end="6" loop="true" />
+    <sequence name="down-stop" start="1" end="1" loop="false" />
+    <sequence name="left-stop" start="3" end="3" loop="false" />
+    <sequence name="up-stop"  start="8" end="8" loop="false" />
+    <sequence name="right-stop" start="4" end="4" loop="false" />
+    <sequence name="death" start="26" end="28" loop="false" />
+</animation>
+

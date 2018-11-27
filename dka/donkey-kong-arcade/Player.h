@@ -31,6 +31,7 @@ class Player
 
     static Player m_Player;
 
+
     int score = 0;
     int lifePoints = 3;
     int level = 1;

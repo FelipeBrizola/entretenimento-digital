@@ -33,6 +33,10 @@ class PauseState : public cgf::GameState
 
     static PauseState m_PauseState;
 
+    enum { RIGHT=0, LEFT, UP, DOWN };
+    std::string walkStates[8];
+    int currentDir;
+    int x, y;
     cgf::Sprite pauseSprite;
     cgf::InputManager* im;
 

@@ -388,3 +388,113 @@
 	<map>
 	<SFML/Graphics.hpp>
 
+1543316946 source:/home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/main.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<cmath>
+	"Game.h"
+	"MenuState.h"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/Game.h
+	<SFML/Audio.hpp>
+	<SFML/Graphics.hpp>
+	<stack>
+	<memory>
+	"ClockHUD.h"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/ClockHUD.h
+	<vector>
+	<string>
+	<sstream>
+	<iomanip>
+	<SFML/Graphics.hpp>
+	"FrameClock.h"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/FrameClock.h
+	<limits>
+	<cassert>
+	<algorithm>
+	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
+
+1543320517 /home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/GameState.h
+	"Game.h"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/Sprite.h
+	<vector>
+	<map>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/System/Vector2.hpp>
+	"TextureManager.h"
+	"Anim.h"
+	"pugixml/pugixml.hpp"
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/TextureManager.h
+	<map>
+	<string>
+	<SFML/Graphics.hpp>
+	<memory>
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/Anim.h
+	<string>
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
+	"pugiconfig.hpp"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
+
+1543316946 /home/kbase/Documentos/projects/entretenimento-digital/lib/CGF/include/InputManager.h
+	<map>
+	<SFML/Graphics.hpp>
+
+1543320517 source:/home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/MenuState.cpp
+	<iostream>
+	"Game.h"
+	"InputManager.h"
+	"MenuState.h"
+	"PlayState.h"
+
+1543357263 /home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1543316946 source:/home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
+	<iostream>
+	"Game.h"
+	"InputManager.h"
+	"PauseState.h"
+
+1543354897 /home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/PauseState.h
+	"GameState.h"
+	"Sprite.h"
+	"InputManager.h"
+
+1543316946 source:/home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/Player.cpp
+	<iostream>
+	"Player.h"
+
+1543355119 /home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/Player.h
+	<iostream>
+
+1543357344 source:/home/kbase/Documentos/projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp
+	<iostream>
+	<cmath>
+	"Game.h"
+	"PlayState.h"
+	"InputManager.h"
+

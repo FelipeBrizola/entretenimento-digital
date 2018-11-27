@@ -42,10 +42,16 @@ class PlayState : public cgf::GameState
 
     static PlayState m_PlayState;
 
+
+    enum { RIGHT=0, LEFT, UP, DOWN };
+    std::string walkStates[8];
+    int currentDir;
+    int x, y;
+
     int dirx, diry;
     cgf::Sprite player;
-    cgf::Sprite playSprite2;
-    cgf::Sprite playSprite3;
+    cgf::Sprite level;
+
     sf::RenderWindow* screen;
     cgf::InputManager* im;
 };
