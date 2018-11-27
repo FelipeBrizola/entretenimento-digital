@@ -14,14 +14,14 @@
 #include "Sprite.h"
 #include "InputManager.h"
 #include <string>
+#include <tmx/MapLoader.h>
 
 using namespace std;
 
-
 class PlayState : public cgf::GameState
 {
-    public:
 
+    public:
     void init();
     void cleanup();
 
@@ -50,6 +50,8 @@ class PlayState : public cgf::GameState
 
     string playerStates[5];
     int currentState;
+
+    tmx::MapLoader* map;
 
     int dirx, diry;
     cgf::Sprite player;
