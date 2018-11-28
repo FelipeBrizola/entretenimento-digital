@@ -54,6 +54,10 @@ class PlayState : public cgf::GameState
 
     sf::RenderWindow* screen;
     cgf::InputManager* im;
+
+    sf::SoundBuffer levelSoundBuffer;
+    sf::Sound levelSound;
+
 };
 
 #endif

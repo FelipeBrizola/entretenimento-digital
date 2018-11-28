@@ -19,6 +19,11 @@ using namespace std;
 
 void PlayState::init()
 {
+    levelSoundBuffer.loadFromFile("data/audio/intro1.wav");
+    levelSound.setBuffer(levelSoundBuffer);
+
+    levelSound.setVolume(100);
+    levelSound.play();
 
     walkStates[0] = "right";
     walkStates[1] = "left";
@@ -54,7 +59,7 @@ void PlayState::init()
     //sprite.setPosition(96,172);
     player.setPosition(30,30);
     player.setAnimRate(30);
-    player.setScale(3,3);
+    player.setScale(2,2);
     player.play();
 
     dirx = 0; // sprite dir: right (1), left (-1)
