@@ -13,6 +13,7 @@
 #include "GameState.h"
 #include "Sprite.h"
 #include "InputManager.h"
+#include <tmx/MapLoader.h>
 
 class PlayState : public cgf::GameState
 {
@@ -57,6 +58,8 @@ class PlayState : public cgf::GameState
 
     sf::SoundBuffer levelSoundBuffer;
     sf::Sound levelSound;
+
+    tmx::MapLoader* map;
 
 };
 

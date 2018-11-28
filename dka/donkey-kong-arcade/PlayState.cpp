@@ -35,9 +35,8 @@ void PlayState::init()
     walkStates[7] = "down-stop";
     //player.load("data/img/Char19s.png");
 	//player.setPosition(10,100);
-
-    level.load("data/maps/level.png");
-	level.setPosition(0,0);
+    map = new tmx::MapLoader("data/maps");
+    map->Load("mapa.tmx");
 
     dirx = 0; // sprite direction: right (1), left (-1)
     diry = 0; // down (1), up (-1)
@@ -158,6 +157,6 @@ void PlayState::update(cgf::Game* game)
 void PlayState::draw(cgf::Game* game)
 {
     screen = game->getScreen();
-    screen->draw(level);
+    map->Draw(*screen);
     screen->draw(player);
 }
