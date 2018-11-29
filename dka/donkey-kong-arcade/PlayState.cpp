@@ -95,7 +95,7 @@ void PlayState::init()
 
 
     finishGameText.setFont(gameFont);
-    finishGameText.setPosition(200, 10);
+    finishGameText.setPosition(250, 350);
     finishGameText.setCharacterSize(80);
 
     VICTORY_POSITION = 72;
@@ -112,6 +112,14 @@ void PlayState::wonGame(cgf::Game* game) {
     levelSound.stop();
     winnerSound.play();
 }
+
+void PlayState::loseGame(cgf::Game* game) {
+
+    isLoser = true;
+    levelSound.stop();
+    winnerSound.play();
+}
+
 
 bool PlayState::checkBarrelCollision(cgf::Sprite* player, cgf::Sprite barrel)
 {
@@ -210,9 +218,10 @@ void PlayState::update(cgf::Game* game)
 
     for (int i = 0; i < barrels.size(); i++)
     {
-
-        if (checkBarrelCollision(&player, barrels[i]->getSprite()))
-           isLoser = true;
+        if (checkBarrelCollision(&player, barrels[i]->getSprite())) {
+            loseGame(game);
+            break;
+        }
 
         barrels[i]->getSprite().update(game->getUpdateInterval());
         barrels[i]->moving();
@@ -263,6 +272,7 @@ void PlayState::draw(cgf::Game* game)
     if (isLoser) {
         finishGameText.setColor(color.Red);
         finishGameText.setString("YOU LOSE! \n r to play again");
+        levelSound.play();
         screen->draw(finishGameText);
     }
 }

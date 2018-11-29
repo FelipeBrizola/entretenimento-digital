@@ -30,6 +30,7 @@ class PlayState : public cgf::GameState
     void resume();
 
     void wonGame(cgf::Game* game);
+    void loseGame(cgf::Game* game);
     void handleEvents(cgf::Game* game);
     void update(cgf::Game* game);
     void draw(cgf::Game* game);

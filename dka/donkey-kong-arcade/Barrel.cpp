@@ -13,7 +13,7 @@ Barrel::~Barrel()
 
 void Barrel::moving()
 {
-    this->sprite.setPosition(this->sprite.getPosition().x, this->sprite.getPosition().y + 1);
+    this->sprite.setPosition(this->sprite.getPosition().x, this->sprite.getPosition().y + 1.5);
 }
 
 cgf::Sprite Barrel::getSprite ()
