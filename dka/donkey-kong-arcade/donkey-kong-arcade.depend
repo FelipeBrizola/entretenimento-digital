@@ -7,14 +7,14 @@
 	"Game.h"
 	"MenuState.h"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/Game.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/Game.h
 	<SFML/Audio.hpp>
 	<SFML/Graphics.hpp>
 	<stack>
 	<memory>
 	"ClockHUD.h"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/ClockHUD.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/ClockHUD.h
 	<vector>
 	<string>
 	<sstream>
@@ -22,7 +22,7 @@
 	<SFML/Graphics.hpp>
 	"FrameClock.h"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/FrameClock.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/FrameClock.h
 	<limits>
 	<cassert>
 	<algorithm>
@@ -34,10 +34,10 @@
 	"Sprite.h"
 	"InputManager.h"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/GameState.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/GameState.h
 	"Game.h"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/Sprite.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/Sprite.h
 	<vector>
 	<map>
 	<SFML/Graphics/RenderTarget.hpp>
@@ -49,16 +49,16 @@
 	"Anim.h"
 	"pugixml/pugixml.hpp"
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/TextureManager.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/TextureManager.h
 	<map>
 	<string>
 	<SFML/Graphics.hpp>
 	<memory>
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/Anim.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/Anim.h
 	<string>
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugixml.hpp
 	"pugiconfig.hpp"
 	<stddef.h>
 	<exception>
@@ -66,9 +66,9 @@
 	<iosfwd>
 	<string>
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/pugixml/pugiconfig.hpp
 
-1543443292 /home/felipe/entretenimento-digital/lib/CGF/include/InputManager.h
+1543008234 /home/felipe/entretenimento-digital/lib/CGF/include/InputManager.h
 	<map>
 	<SFML/Graphics.hpp>
 
@@ -284,22 +284,22 @@
 	<Box2D/Box2D.h>
 	<SFML/Graphics.hpp>
 
-1543443291 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
+1543008234 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
 	<iostream>
 	"Game.h"
 	"InputManager.h"
 	"PauseState.h"
 
-1543443291 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.h
+1543283633 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PauseState.h
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
 
-1543443291 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.cpp
+1543008234 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.cpp
 	<iostream>
 	"Player.h"
 
-1543443291 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.h
+1543283633 /home/felipe/entretenimento-digital/dka/donkey-kong-arcade/Player.h
 	<iostream>
 
 1543451134 source:/home/felipe/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp

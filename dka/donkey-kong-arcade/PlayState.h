@@ -59,6 +59,14 @@ class PlayState : public cgf::GameState
     sf::SoundBuffer levelSoundBuffer;
     sf::Sound levelSound;
 
+    sf::Clock clock;
+    int countdown = 30;
+    std::string countdownString;
+    std::ostringstream convert;
+    sf::Text timerText;
+    sf::Font timerFont;
+    sf::Color color;
+
     tmx::MapLoader* map;
 
     // Checks collision between a sprite and a map layer

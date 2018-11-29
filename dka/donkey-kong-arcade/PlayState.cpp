@@ -19,6 +19,15 @@ using namespace std;
 
 void PlayState::init()
 {
+    if (!timerFont.loadFromFile("data/fonts/arial.ttf"))
+        std::cerr << "No font file found!" << std::endl;
+
+    timerText.setFont(timerFont);
+    timerText.setString("00");
+    timerText.setPosition(100, 10);
+    timerText.setColor(color.Magenta);
+    timerText.setCharacterSize(20);
+
     levelSoundBuffer.loadFromFile("data/audio/intro1.wav");
     levelSound.setBuffer(levelSoundBuffer);
 
@@ -151,6 +160,8 @@ void PlayState::draw(cgf::Game* game)
     screen = game->getScreen();
     map->Draw(*screen);
     screen->draw(player);
+    screen->draw(timerText);
+    // screen->display();
 }
 
 bool PlayState::checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj)
