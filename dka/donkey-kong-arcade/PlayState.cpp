@@ -22,8 +22,10 @@ void PlayState::init()
     if (!timerFont.loadFromFile("data/fonts/arial.ttf"))
         std::cerr << "No font file found!" << std::endl;
 
+    convert << countdown;
+    countdownString = convert.str();
     timerText.setFont(timerFont);
-    timerText.setString("00");
+    timerText.setString(countdownString);
     timerText.setPosition(100, 10);
     timerText.setColor(color.Magenta);
     timerText.setCharacterSize(20);
@@ -153,6 +155,25 @@ void PlayState::update(cgf::Game* game)
     screen = game->getScreen();
 
     checkCollision(1, game, &player);
+
+    //TIMER - 30 SECONDS
+    int timer = clock.getElapsedTime().asMilliseconds();
+    std::cout << timer << std::endl;
+
+    //convert countdown to a string
+    convert << countdown;
+    countdownString = convert.str();
+     if (timer > 0) {
+        countdown--;
+        convert << countdown;
+        countdownString = convert.str();
+        timerText.setPosition(100, 10);
+        timerText.setString("");
+        timerText.setString(countdownString);
+       // timerText.setPosition(50,50);
+        //timerText.setColor(color.Magenta);
+        clock.restart();
+    }
 }
 
 void PlayState::draw(cgf::Game* game)
