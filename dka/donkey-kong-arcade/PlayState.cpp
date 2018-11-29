@@ -54,7 +54,7 @@ void PlayState::init()
     im->addKeyInput("dead", sf::Keyboard::D);
 
     player.load("data/player/mario.png",16,16,24,24,0,0,8,4,32);
-    player.loadAnimation("data/player/test.xml");
+    player.loadAnimation("data/player/mario.xml");
 
     enemy.load("data/img/enemies.png",42,42,8,8,0,7,6,3,18);
     enemy.loadAnimation("data/img/enemies.xml");
