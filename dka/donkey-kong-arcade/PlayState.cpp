@@ -24,9 +24,14 @@ void PlayState::init()
 
     levelSoundBuffer.loadFromFile("data/audio/intro1.wav");
     levelSound.setBuffer(levelSoundBuffer);
-
+    levelSound.setLoop(true);
     levelSound.setVolume(100);
     levelSound.play();
+
+    winnerSoundBuffer.loadFromFile("data/audio/kaboom.wav");
+    winnerSound.setBuffer(winnerSoundBuffer);
+    winnerSound.setLoop(false);
+    winnerSound.setVolume(100);
 
     walkStates[0] = "right";
     walkStates[1] = "left";
@@ -78,14 +83,14 @@ void PlayState::init()
     std::string scoreStr = std::to_string(score);
     timerText.setFont(gameFont);
     timerText.setString(scoreStr + " seconds");
-    timerText.setPosition(700, 10);
+    timerText.setPosition(690, 10);
     timerText.setColor(color.Magenta);
     timerText.setCharacterSize(20);
 
 
     finishGameText.setFont(gameFont);
-    finishGameText.setPosition(100, 10);
-    finishGameText.setCharacterSize(20);
+    finishGameText.setPosition(200, 10);
+    finishGameText.setCharacterSize(80);
 
     VICTORY_POSITION = 72;
     isWinner = false;
@@ -94,11 +99,17 @@ void PlayState::init()
 	cout << "PlayState: Init" << endl;
 }
 
-void PlayState::wonGame() {
-    cout << "chegou" << endl;
-    isWinner = true;
+void PlayState::wonGame(cgf::Game* game) {
 
-    //enemy.setAnimation("die");
+    isWinner = true;
+    enemy.setAnimation("die");
+    levelSound.stop();
+    winnerSound.play();
+}
+
+bool PlayState::checkBarrelCollision(cgf::Sprite* player, cgf::Sprite barrel)
+{
+   return player->bboxCollision(barrel);
 }
 
 void PlayState::cleanup()
@@ -184,6 +195,10 @@ void PlayState::update(cgf::Game* game)
 
     for (int i = 0; i < barrels.size(); i++)
     {
+
+        if (checkBarrelCollision(&player, barrels[i]->getSprite()))
+           isLoser = true;
+
         barrels[i]->getSprite().update(game->getUpdateInterval());
         barrels[i]->moving();
 
@@ -201,6 +216,9 @@ void PlayState::update(cgf::Game* game)
 
     time += clock.restart();
     score = static_cast<unsigned int>(time.asSeconds());
+
+    if (player.getPosition().y < VICTORY_POSITION)
+        wonGame(game);
 }
 
 void PlayState::draw(cgf::Game* game)
@@ -220,8 +238,15 @@ void PlayState::draw(cgf::Game* game)
     screen->draw(timerText);
 
     if (isWinner) {
-        cout << "AEEEEEEe" << endl;
-        finishGameText.setString("GANHASTES O JOGO");
+        finishGameText.setColor(color.Blue);
+        finishGameText.setString("YOU WIN!");
+        levelSound.play();
+        screen->draw(finishGameText);
+    }
+
+    if (isLoser) {
+        finishGameText.setColor(color.Red);
+        finishGameText.setString("YOU LOSE!");
         screen->draw(finishGameText);
     }
 }
@@ -396,8 +421,6 @@ bool PlayState::checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj)
     else if(py + objsize.y >= mapsize.y * tilesize.y)
         obj->setPosition(px, mapsize.y*tilesize.y - objsize.y - 1);
 
-    if (py < VICTORY_POSITION)
-        wonGame();
 
     return bump;
 }

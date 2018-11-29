@@ -28,7 +28,7 @@ class PlayState : public cgf::GameState
     void pause();
     void resume();
 
-    void wonGame();
+    void wonGame(cgf::Game* game);
     void handleEvents(cgf::Game* game);
     void update(cgf::Game* game);
     void draw(cgf::Game* game);
@@ -62,6 +62,8 @@ class PlayState : public cgf::GameState
 
     sf::SoundBuffer levelSoundBuffer;
     sf::Sound levelSound;
+    sf::SoundBuffer winnerSoundBuffer;
+    sf::Sound winnerSound;
 
     unsigned int score = 0;
     sf::Clock clock;
@@ -83,6 +85,8 @@ class PlayState : public cgf::GameState
 
     // get a cell GID from the map (x and y in world coords)
     sf::Uint16 getCellFromMap(uint8_t layernum, float x, float y);
+
+    bool checkBarrelCollision(cgf::Sprite* player, cgf::Sprite barrel);
 
 };
 

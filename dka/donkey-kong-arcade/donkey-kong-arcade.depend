@@ -578,7 +578,7 @@
 	"MenuState.h"
 	"PlayState.h"
 
-1543529735 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
+1543532658 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
@@ -605,7 +605,7 @@
 1543529732 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/Player.h
 	<iostream>
 
-1543529737 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp
+1543531382 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.cpp
 	<iostream>
 	<cmath>
 	"Game.h"
