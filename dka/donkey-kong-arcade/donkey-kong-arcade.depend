@@ -578,7 +578,7 @@
 	"MenuState.h"
 	"PlayState.h"
 
-1543532658 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
+1543533704 /home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PlayState.h
 	"GameState.h"
 	"Sprite.h"
 	"InputManager.h"
@@ -586,6 +586,7 @@
 	<vector>
 	"Barrel.h"
 	<stdlib.h>
+	"MenuState.h"
 
 1543529722 source:/home/kbase/Projects/entretenimento-digital/dka/donkey-kong-arcade/PauseState.cpp
 	<iostream>

@@ -17,6 +17,7 @@
 #include <vector>
 #include "Barrel.h"
 #include <stdlib.h>
+#include "MenuState.h"
 
 class PlayState : public cgf::GameState
 {
@@ -56,6 +57,7 @@ class PlayState : public cgf::GameState
     int dirx, diry;
     cgf::Sprite player;
     cgf::Sprite enemy;
+    cgf::Sprite princess;
 
     sf::RenderWindow* screen;
     cgf::InputManager* im;

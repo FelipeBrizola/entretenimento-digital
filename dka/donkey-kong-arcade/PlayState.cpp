@@ -24,7 +24,7 @@ void PlayState::init()
 
     levelSoundBuffer.loadFromFile("data/audio/intro1.wav");
     levelSound.setBuffer(levelSoundBuffer);
-    levelSound.setLoop(true);
+    levelSound.setLoop(false);
     levelSound.setVolume(100);
     levelSound.play();
 
@@ -56,10 +56,16 @@ void PlayState::init()
     im->addKeyInput("quit", sf::Keyboard::Escape);
     im->addKeyInput("stats", sf::Keyboard::S);
     im->addMouseInput("rightclick", sf::Mouse::Right);
-    im->addKeyInput("dead", sf::Keyboard::D);
+    im->addKeyInput("reload", sf::Keyboard::R);
 
     player.load("data/player/mario.png",16,16,24,24,0,0,8,4,32);
     player.loadAnimation("data/player/mario.xml");
+
+    princess.load("data/img/princesa.png");
+
+    princess.setPosition(420, 60);
+    princess.setScale(0.2, 0.2);
+
 
     enemy.load("data/img/enemies.png",42,42,8,8,0,7,6,3,18);
     enemy.loadAnimation("data/img/enemies.xml");
@@ -115,6 +121,7 @@ bool PlayState::checkBarrelCollision(cgf::Sprite* player, cgf::Sprite barrel)
 void PlayState::cleanup()
 {
     delete map;
+    barrels.clear();
 	cout << "PlayState: Clean" << endl;
 }
 
@@ -140,6 +147,12 @@ void PlayState::handleEvents(cgf::Game* game)
             game->quit();
     }
 
+    if (im->testEvent("reload"))
+       game->changeState(MenuState::instance());
+
+    if (isLoser || isWinner)
+       return;
+
     dirx = diry = 0;
 
     int newDir = currentDir;
@@ -163,7 +176,6 @@ void PlayState::handleEvents(cgf::Game* game)
         diry = 1;
         newDir = DOWN;
     }
-
     if(dirx == 0 && diry == 0) {
         player.pause();
     }
@@ -187,6 +199,9 @@ void PlayState::handleEvents(cgf::Game* game)
 
 void PlayState::update(cgf::Game* game)
 {
+    if (isWinner || isLoser)
+        return;
+
     screen = game->getScreen();
 
     checkCollision(1, game, &player);
@@ -227,6 +242,7 @@ void PlayState::draw(cgf::Game* game)
     map->Draw(*screen);
     screen->draw(player);
     screen-> draw(enemy);
+    screen->draw(princess);
 
     for (int i = 0; i < barrels.size(); i++)
     {
@@ -239,14 +255,14 @@ void PlayState::draw(cgf::Game* game)
 
     if (isWinner) {
         finishGameText.setColor(color.Blue);
-        finishGameText.setString("YOU WIN!");
+        finishGameText.setString("YOU WIN! \n r to play again");
         levelSound.play();
         screen->draw(finishGameText);
     }
 
     if (isLoser) {
         finishGameText.setColor(color.Red);
-        finishGameText.setString("YOU LOSE!");
+        finishGameText.setString("YOU LOSE! \n r to play again");
         screen->draw(finishGameText);
     }
 }
