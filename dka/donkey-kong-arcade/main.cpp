@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 {
     cgf::Game game(5,30);
 
-	game.init("Donkey Kong",600,800,false);
+	game.init("Donkey Kong",800,800,false);
 
     game.changeState(MenuState::instance());
 
