@@ -14,6 +14,9 @@
 #include "Sprite.h"
 #include "InputManager.h"
 #include <tmx/MapLoader.h>
+#include <vector>
+#include "Barrel.h"
+#include <stdlib.h>
 
 class PlayState : public cgf::GameState
 {
@@ -25,6 +28,7 @@ class PlayState : public cgf::GameState
     void pause();
     void resume();
 
+    void wonGame();
     void handleEvents(cgf::Game* game);
     void update(cgf::Game* game);
     void draw(cgf::Game* game);
@@ -51,7 +55,7 @@ class PlayState : public cgf::GameState
 
     int dirx, diry;
     cgf::Sprite player;
-    cgf::Sprite level;
+    cgf::Sprite enemy;
 
     sf::RenderWindow* screen;
     cgf::InputManager* im;
@@ -59,15 +63,20 @@ class PlayState : public cgf::GameState
     sf::SoundBuffer levelSoundBuffer;
     sf::Sound levelSound;
 
+    unsigned int score = 0;
     sf::Clock clock;
-    int countdown = 30;
-    std::string countdownString;
-    std::ostringstream convert;
+    sf::Time time;
     sf::Text timerText;
-    sf::Font timerFont;
+    sf::Text finishGameText;
+    sf::Font gameFont;
     sf::Color color;
 
+    int VICTORY_POSITION;
+    bool isWinner, isLoser;
+
     tmx::MapLoader* map;
+
+    std::vector<Barrel*> barrels;
 
     // Checks collision between a sprite and a map layer
     bool checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj);

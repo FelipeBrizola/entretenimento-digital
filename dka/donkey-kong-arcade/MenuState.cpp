@@ -17,12 +17,12 @@ void MenuState::init()
     im->addKeyInput("start", sf::Keyboard::Return);
     im->addKeyInput("quit", sf::Keyboard::Escape);
 
-//    menuSoundBuffer.loadFromFile("data/audio/menu.wav");
-//    menuSound.setBuffer(menuSoundBuffer);
-//
-//    menuSound.setLoop(true);
-//    menuSound.setVolume(100);
-//    menuSound.play();
+    menuSoundBuffer.loadFromFile("data/audio/menu.wav");
+    menuSound.setBuffer(menuSoundBuffer);
+
+    menuSound.setLoop(true);
+    menuSound.setVolume(80);
+    menuSound.play();
 
     cout << "MenuState Init Successful" << endl;
 }

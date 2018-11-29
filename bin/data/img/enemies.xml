@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Format:
+name   => name of the animation sequence
+start  => starting frame
+end    => ending frame
+loop   => looping animation (default)
+-->
+<animation name="enemy">
+    <sequence name="move" start="7" end="9" loop="true" />
+    <sequence name="die" start="12" end="13" loop="true" />
+</animation>

@@ -19,16 +19,8 @@ using namespace std;
 
 void PlayState::init()
 {
-    if (!timerFont.loadFromFile("data/fonts/arial.ttf"))
+    if (!gameFont.loadFromFile("data/fonts/arial.ttf"))
         std::cerr << "No font file found!" << std::endl;
-
-    convert << countdown;
-    countdownString = convert.str();
-    timerText.setFont(timerFont);
-    timerText.setString(countdownString);
-    timerText.setPosition(100, 10);
-    timerText.setColor(color.Magenta);
-    timerText.setCharacterSize(20);
 
     levelSoundBuffer.loadFromFile("data/audio/intro1.wav");
     levelSound.setBuffer(levelSoundBuffer);
@@ -64,6 +56,15 @@ void PlayState::init()
     player.load("data/player/mario.png",16,16,24,24,0,0,8,4,32);
     player.loadAnimation("data/player/test.xml");
 
+    enemy.load("data/img/enemies.png",42,42,8,8,0,7,6,3,18);
+    enemy.loadAnimation("data/img/enemies.xml");
+    enemy.setAnimation("move");
+    enemy.setPosition(350,50);
+    enemy.setScale(1.5,1.5);
+    enemy.setAnimRate(5);
+    enemy.play();
+
+    player.setAnimation("right");
     player.setPosition(100,700);
     player.setAnimRate(30);
     player.setScale(1.5,1.5);
@@ -74,7 +75,30 @@ void PlayState::init()
 
     currentDir = DOWN;
 
+    std::string scoreStr = std::to_string(score);
+    timerText.setFont(gameFont);
+    timerText.setString(scoreStr + " seconds");
+    timerText.setPosition(700, 10);
+    timerText.setColor(color.Magenta);
+    timerText.setCharacterSize(20);
+
+
+    finishGameText.setFont(gameFont);
+    finishGameText.setPosition(100, 10);
+    finishGameText.setCharacterSize(20);
+
+    VICTORY_POSITION = 72;
+    isWinner = false;
+    isLoser = false;
+
 	cout << "PlayState: Init" << endl;
+}
+
+void PlayState::wonGame() {
+    cout << "chegou" << endl;
+    isWinner = true;
+
+    //enemy.setAnimation("die");
 }
 
 void PlayState::cleanup()
@@ -156,24 +180,27 @@ void PlayState::update(cgf::Game* game)
 
     checkCollision(1, game, &player);
 
-    //TIMER - 30 SECONDS
-    int timer = clock.getElapsedTime().asMilliseconds();
-    std::cout << timer << std::endl;
+    enemy.update(game->getUpdateInterval());
 
-    //convert countdown to a string
-    convert << countdown;
-    countdownString = convert.str();
-     if (timer > 0) {
-        countdown--;
-        convert << countdown;
-        countdownString = convert.str();
-        timerText.setPosition(100, 10);
-        timerText.setString("");
-        timerText.setString(countdownString);
-       // timerText.setPosition(50,50);
-        //timerText.setColor(color.Magenta);
-        clock.restart();
+    for (int i = 0; i < barrels.size(); i++)
+    {
+        barrels[i]->getSprite().update(game->getUpdateInterval());
+        barrels[i]->moving();
+
+        if (barrels[i]->getSprite().getPosition().y > 800)
+        {
+            barrels.erase(barrels.begin() + i);
+        }
     }
+
+    if (barrels.size() < 30 && (rand() % 1000) > 950)
+    {
+        int randomPos = rand() % 25 + 1;
+        barrels.push_back(new Barrel(randomPos * 32, 0));
+    }
+
+    time += clock.restart();
+    score = static_cast<unsigned int>(time.asSeconds());
 }
 
 void PlayState::draw(cgf::Game* game)
@@ -181,8 +208,22 @@ void PlayState::draw(cgf::Game* game)
     screen = game->getScreen();
     map->Draw(*screen);
     screen->draw(player);
+    screen-> draw(enemy);
+
+    for (int i = 0; i < barrels.size(); i++)
+    {
+        screen->draw(barrels[i]->getSprite());
+    }
+
+    std::string scoreStr = std::to_string(score);
+    timerText.setString(scoreStr + " seconds");
     screen->draw(timerText);
-    // screen->display();
+
+    if (isWinner) {
+        cout << "AEEEEEEe" << endl;
+        finishGameText.setString("GANHASTES O JOGO");
+        screen->draw(finishGameText);
+    }
 }
 
 bool PlayState::checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj)
@@ -354,6 +395,9 @@ bool PlayState::checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj)
         obj->setPosition(px,0);
     else if(py + objsize.y >= mapsize.y * tilesize.y)
         obj->setPosition(px, mapsize.y*tilesize.y - objsize.y - 1);
+
+    if (py < VICTORY_POSITION)
+        wonGame();
 
     return bump;
 }
