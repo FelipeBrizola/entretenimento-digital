@@ -102,6 +102,10 @@ void PlayState::init()
     isWinner = false;
     isLoser = false;
 
+    clock.restart();
+    time = time.Zero;
+    score = 0;
+
 	cout << "PlayState: Init" << endl;
 }
 
@@ -111,6 +115,8 @@ void PlayState::wonGame(cgf::Game* game) {
     enemy.setAnimation("die");
     levelSound.stop();
     winnerSound.play();
+    time = time.Zero;
+
 }
 
 void PlayState::loseGame(cgf::Game* game) {
@@ -118,6 +124,8 @@ void PlayState::loseGame(cgf::Game* game) {
     isLoser = true;
     levelSound.stop();
     winnerSound.play();
+    time = time.Zero;
+
 }
 
 
@@ -241,6 +249,8 @@ void PlayState::update(cgf::Game* game)
     time += clock.restart();
     score = static_cast<unsigned int>(time.asSeconds());
 
+    cout << score << endl;
+
     if (player.getPosition().y < VICTORY_POSITION)
         wonGame(game);
 }
@@ -265,14 +275,18 @@ void PlayState::draw(cgf::Game* game)
     if (isWinner) {
         finishGameText.setColor(color.Blue);
         finishGameText.setString("YOU WIN! \n r to play again");
+        timerText.setString("");
         levelSound.play();
+        screen->draw(timerText);
         screen->draw(finishGameText);
     }
 
     if (isLoser) {
         finishGameText.setColor(color.Red);
         finishGameText.setString("YOU LOSE! \n r to play again");
+        timerText.setString("");
         levelSound.play();
+        screen->draw(timerText);
         screen->draw(finishGameText);
     }
 }
@@ -307,10 +321,6 @@ bool PlayState::checkCollision(uint8_t layer, cgf::Game* game, cgf::Sprite* obj)
     float vx = offset.x;
     float vy = offset.y;
 
-    //cout << "px,py: " << px << " " << py << endl;
-
-    //cout << "tilesize " << tilesize.x << " " << tilesize.y << endl;
-    //cout << "mapsize " << mapsize.x << " " << mapsize.y << endl;
 
     // Test the horizontal movement first
     i = objsize.y > tilesize.y ? tilesize.y : objsize.y;
